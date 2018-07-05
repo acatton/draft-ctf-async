@@ -1,0 +1,37 @@
+---
+name: async-ctf
+version: '0.0.1'
+category: CTF
+synopsis: Python ASync Capture the flag
+description: >
+    Server part to teach people how to use python async/await.
+author: Antoine Catton
+maintainer: Antoine Catton
+github: acatton/async-ctf
+license: MIT
+
+ghc-options: -Wall
+
+dependencies:
+  - base >=4.10.0 && <5
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - CTF.Http.Utils
+    - CTF.Http
+
+  default-extensions:
+    - OverloadedStrings
+  dependencies:
+    - text
+    - warp
+    - wai
+    - wai-routing
+    - wai-predicates
+    - bytestring
+    - aeson
+    - cryptonite
+    - bytedump
+    - memory >=0.14
+    - http-types
